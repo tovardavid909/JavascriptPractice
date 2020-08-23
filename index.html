@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Javascript Practice</title>
+</head>
+<body>
+    <h2 id="title">Javascript Practice</h2>
+    <Button id="btn">Click me</Button>
+<br><br><br>
+<p class="list">This is a statement </p>
+<p class="list">This is a statement </p>
+<p class="list">This is a statement </p>
+<p class="list">This is a statement </p>
+<button id="btn2">Change</button>
+<br><br><br>
+<button id="profilebtn">Profile</button>
+
+<!--empty html below-->
+
+<p id="box"></p>
+<p id="box2"></p>
+
+<input type="text" id="user">
+<button id="userName">Enter</button>
+<p id="box3"></p>
+<br><br><br>
+<h2>Grocery List</h2>
+<input type="text" id="addList">
+<button id="add">Add</button>
+<p id="box4"></p>
+
+<script>
+    //code to change color of tiile targeting by id
+    //first, add an event listener
+    document.getElementById('btn').addEventListener
+    ('click', changeColor);
+    //now, create the function
+    function changeColor() {
+        document.getElementById("title").style.color = "red"; 
+    }
+//code to change style of elements by className
+//first, add event listener
+
+document.getElementById('btn2').addEventListener
+    ('click', newStyle);
+    //now create the function but now we need to loop through elements first
+    function newStyle() {
+        let things = document.getElementsByClassName("list");
+        for (i = 0; i < things.length; i++) {
+            things[2].style.backgroundColor = "red";
+        }
+    }
+
+    //using innerhtml
+    //add event Listener
+    document.getElementById ('profileBtn').addEventListener
+    ('click' , displayProfile);
+    //now, create function
+    function displayProfile() {
+        let firstName = "Jane"; 
+        document.getElementById("box").innerHTML = "My name is " + firstname;
+        let age = 30; 
+        document.querySelector ("#box2").innerHTML = "I am " + age + "years old s";
+
+    }
+
+    //using an if statement and having the user add their own synamic content
+    let name = document.getElementById(userName). addEventListener
+    ('click', greeting);
+    //create greeting function
+    function greeting() {
+        if(name.value === "") {
+        alert("please fill out the empty field"); 
+        }
+        else {
+            document.getElementById(box3).innerHTML = "Hello " + name.value; 
+        }
+    }
+</script>
+
+
+</body>
+</html>
